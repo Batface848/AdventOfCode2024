@@ -87,7 +87,6 @@ class Day5Solution:
 
     def run(self):
         self.parseFileContents()
-        print(self.rules)
         part1Solution = self.solvePart1()
         part2Solution = self.solvePart2()
         print(part1Solution)
