@@ -66,7 +66,6 @@ class Day5Solution:
             counters = {}
             for number in rule:
                 counters[number] = 0
-            print(counters)
             for pair in self.pairs:
                 if pair[0] in rule and pair[1] in rule:
                     pairsRequired.append(pair)
