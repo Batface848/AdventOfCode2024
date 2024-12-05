@@ -4,7 +4,6 @@ class Day2Solution:
         self.data = []
         self.safeCount = 0
         self.clearData = []
-        self.newFile = open("day2test2.txt", "w")
 
     def parseFileContents(self):
         contents = open(self.fileName).read().splitlines()
@@ -49,7 +48,6 @@ class Day2Solution:
 
     def solvePart2(self):
         for level in self.clearData:
-            levelSafe = False
             for i in range(len(level)):
                 copiedLevel = level.copy()
                 copiedLevel.pop(i)
@@ -78,11 +76,8 @@ class Day2Solution:
                         safe = True
 
                 if safe:
-                    levelSafe = True
                     self.safeCount += 1
                     break
-            if levelSafe:
-                self.newFile.write(str(level) + "\n")
 
 
         return f"Part 2 Solution: {self.safeCount}"
